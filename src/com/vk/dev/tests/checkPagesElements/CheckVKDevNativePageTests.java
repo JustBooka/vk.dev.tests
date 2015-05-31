@@ -68,6 +68,5 @@ public class CheckVKDevNativePageTests extends MyTestBase {
                 .CheckText("С чего начать?", "//*[@id='dev_page_cont']/div[6]/div/text()")
                 .CheckText("Узнайте,", "//*[@id='dev_page_cont']/div[6]/text()[2]")
                 .CheckText("как создать приложение ВКонтакте", "xpath=(//a[contains(@href, '/dev/native_create')])[5]");
-
     }
 }
