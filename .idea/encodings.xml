@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckAppsManagePageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevHelpPageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevMainPage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevNativePageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevRulesPageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/fillingPagesTests/CreateAppPageTests.java" charset="UTF-8" />
   </component>

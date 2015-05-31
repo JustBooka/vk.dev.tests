@@ -38,10 +38,11 @@ public class CheckCreateAppPageTests extends MyTestBase {
                 .CheckText("Подключить приложение", "id=apps_create_app_btn");
     }
 
+
     @Test
     public void testSelectWeb() throws Exception {
-        app.getNavHelper().OpenVKDevPageAuthorize();
-        app.getNavHelper().ClickAndWait("css=button.flat_button");
+        app.getNavHelper().OpenVKDevPageAuthorize()
+                .ClickAndWait("css=button.flat_button");
         app.getCheckHelper()
                 .CheckText("Создание приложения", "css=div.label")
                 .Click("id=app_type_1")
@@ -81,12 +82,12 @@ public class CheckCreateAppPageTests extends MyTestBase {
 
     @Test
     public void testCheckPostedRules() throws Exception {
-        app.getNavHelper().OpenVKDevPageAuthorize();
-        app.getNavHelper().ClickAndWait("css=button.flat_button");
+        app.getNavHelper().OpenVKDevPageAuthorize()
+                .ClickAndWait("css=button.flat_button");
         app.getCheckHelper()
                 .CheckText("Создание приложения", "css=div.label");
-        app.getNavHelper().Click("id=app_type_2");
-        app.getNavHelper().Click("css=td.apps_edit_agree > a");
+        app.getNavHelper().Click("id=app_type_2")
+                .Click("css=td.apps_edit_agree > a");
         sleep(1000);
         app.getCheckHelper()
                 .CheckText("Правила размещения приложений", "css=div.box_title")
@@ -99,5 +100,20 @@ public class CheckCreateAppPageTests extends MyTestBase {
                 .CheckText("Правила размещения рекламных приложений", "//blockquote/a[3]")
                 .CheckText("Условий размещения приложений на сайте VK.com", "//a[contains(@href, '/dev/appterms')]")
                 .CheckText("Закрыть", "//div[@id='box_layer']/div[2]/div/div[3]/div/table/tbody/tr/td/button");
+    }
+
+    @Test
+    public void testOpenFromDevMain() throws Exception {
+        app.getNavHelper().OpenVKDevPageAuthorize()
+                .ClickAndWait("//*[@id='dev_top_docs']")
+                .ClickAndWait("//a[@href='http://vk.com/editapp?act=create']");
+        app.getCheckHelper()
+                .CheckText("Создание приложения", "//div[@id='apps_edit_create_cont']/div/div")
+                .CheckText("Название:", "css=td.label.ta_r")
+                .CheckText("Тип:", "css=#app_type > tbody > tr > td.label.ta_r")
+                .CheckText("Standalone-приложение", "id=app_type_0")
+                .CheckText("Веб-сайт", "id=app_type_1")
+                .CheckText("IFrame/Flash приложение", "id=app_type_2")
+                .CheckText("Подключить приложение", "id=apps_create_app_btn");
     }
 }
