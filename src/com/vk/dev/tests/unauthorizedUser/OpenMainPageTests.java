@@ -4,7 +4,7 @@ import com.vk.dev.tests.MyTestBase;
 import org.testng.annotations.Test;
 
 public class OpenMainPageTests extends MyTestBase {
-    //Check that main vk page opened when unauthorized user click on elements.
+    //Checking that main vk page opened when unAuthorized user click on elements.
 
     @Test
     public void testUnLoginClickOnCreateApp() throws Exception {
@@ -23,7 +23,7 @@ public class OpenMainPageTests extends MyTestBase {
     @Test
       public void testUnLoginClickOnListMyApps() throws Exception {
         app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("link=Список моих приложений →");
+        app.getNavHelper().ClickAndWait("//div[@id='dev_page_wrap']/div/div/div/div[3]/a");
         app.getCheckHelper().CheckMainVKPage();
     }
 

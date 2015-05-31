@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
  * Created by alexey.bukin on 28.05.2015.
  */
 public class CheckCreateAppPageTests extends MyTestBase {
+//should run with authorize
 
     @Test
     public void testCheckLeftSideMenu() throws Exception {
@@ -88,7 +89,7 @@ public class CheckCreateAppPageTests extends MyTestBase {
         app.getNavHelper().Click("css=td.apps_edit_agree > a");
         sleep(1000);
         app.getCheckHelper()
-//                .CheckText("Правила размещения приложений", "css=div.box_title")
+                .CheckText("Правила размещения приложений", "css=div.box_title")
                 .CheckText("Закрыть", "css=div.box_x_button")
                 .CheckText("Правила платформы", "css=div.wk_header")
                 .CheckText("правила размещения рекламных приложений", "//a[contains(@href, '/dev/ad_apps')]")

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * Created by alexey.bukin on 28.05.2015.
  */
 public class CheckVKDevPageTests extends MyTestBase {
-
+        //should run with authorize
     @Test
     public void testCheckMainDevPageWhenUnAuthorize() throws Exception {
         app.getCheckHelper().CheckDevMainPage();

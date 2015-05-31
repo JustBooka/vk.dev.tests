@@ -19,7 +19,6 @@ public class CheckHelper extends HelperBase{
 
     public CheckHelper CheckDevMainPage() {
         selenium.open("/dev");
-        assertThat("Разработчикам | ВКонтакте", is(selenium.getTitle()));
         return this;
     }
 
