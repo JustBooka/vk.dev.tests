@@ -12,27 +12,27 @@ public class CheckHelper extends HelperBase{
         super(app);
     }
 
-    public CheckHelper CheckMainVKPage() {
+    public CheckHelper checkMainVKPage() {
        assertThat("Добро пожаловать", is(selenium.getText("id=title")));
         return this;
     }
 
-    public CheckHelper CheckDevMainPage() {
+    public CheckHelper checkDevMainPage() {
         selenium.open("/dev");
         return this;
     }
 
-    public CheckHelper CheckText(String text, String element) {
+    public CheckHelper checkText(String text, String element) {
         assertThat(text, is(selenium.getText(element)));
         return this;
     }
 
-    public CheckHelper Click(String element) {
+    public CheckHelper click(String element) {
         selenium.click(element);
         return this;
     }
 
-    public CheckHelper IsPresent (String element){
+    public CheckHelper isPresent(String element){
         selenium.isElementPresent(element);
         return this;
     }

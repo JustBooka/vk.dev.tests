@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/Tests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/page/CreateAppPage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/page/MainVKPage.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckAppsManagePageTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckStandAloneAppEditingPage.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevHelpPageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevMainPage.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevNativePageTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CheckVKDevRulesPageTests.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/fillingPagesTests/CreateAppPageTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/checkPagesElements/CreateAppPageTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vk/dev/tests/fillingTests/CreateAppTest.java" charset="UTF-8" />
   </component>
 </project>

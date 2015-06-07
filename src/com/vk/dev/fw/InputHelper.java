@@ -9,9 +9,15 @@ public class InputHelper extends HelperBase{
         super(app);
     }
 
-    public InputHelper TypeText(String element, String text) {
+    public InputHelper typeText(String element, String text) {
         selenium.type(element, text);
         return this;
+    }
+
+    public InputHelper attachFile(String field, String file){
+        selenium.attachFile(field, file);
+        return this;
+
     }
 
 }

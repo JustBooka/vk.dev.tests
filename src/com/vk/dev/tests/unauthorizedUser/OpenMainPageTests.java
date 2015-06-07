@@ -8,29 +8,29 @@ public class OpenMainPageTests extends MyTestBase {
 
     @Test
     public void testUnLoginClickOnCreateApp() throws Exception {
-        app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("css=div.dev_create_app_btn.fl_l > button.flat_button");
-        app.getCheckHelper().CheckMainVKPage();
+        app.getCheckHelper().checkDevMainPage();
+        app.getNavHelper().clickAndWait("css=div.dev_create_app_btn.fl_l > button.flat_button");
+        app.getCheckHelper().checkMainVKPage();
     }
 
     @Test
     public void testUnLoginClickOnMyApp() throws Exception {
-        app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("id=dev_top_apps");
-        app.getCheckHelper().CheckMainVKPage();
+        app.getCheckHelper().checkDevMainPage();
+        app.getNavHelper().clickAndWait("id=dev_top_apps");
+        app.getCheckHelper().checkMainVKPage();
     }
 
     @Test
       public void testUnLoginClickOnListMyApps() throws Exception {
-        app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("//div[@id='dev_page_wrap']/div/div/div/div[3]/a");
-        app.getCheckHelper().CheckMainVKPage();
+        app.getCheckHelper().checkDevMainPage();
+        app.getNavHelper().clickAndWait("//div[@id='dev_page_wrap']/div/div/div/div[3]/a");
+        app.getCheckHelper().checkMainVKPage();
     }
 
     @Test
     public void testUnLoginClickOnBugTracker() throws Exception {
-        app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("//div[@id='dev_page_wrap']/div[3]/div/div/div/a[4]/div");
-        app.getCheckHelper().CheckMainVKPage();
+        app.getCheckHelper().checkDevMainPage();
+        app.getNavHelper().clickAndWait("//div[@id='dev_page_wrap']/div[3]/div/div/div/a[4]/div");
+        app.getCheckHelper().checkMainVKPage();
     }
 }

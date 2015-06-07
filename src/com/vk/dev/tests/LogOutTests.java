@@ -9,9 +9,9 @@ public class LogOutTests extends MyTestBase {
 
     @Test
     public void testLogOut() throws Exception {
-        app.getCheckHelper().CheckDevMainPage();
-        app.getNavHelper().ClickAndWait("css=img");
-        app.getNavHelper().ClickAndWait("id=logout_link");
-        app.getCheckHelper().CheckMainVKPage();
+        app.getCheckHelper().checkDevMainPage();
+        app.getNavHelper().clickAndWait("css=img");
+        app.getNavHelper().clickAndWait("id=logout_link");
+        app.getCheckHelper().checkMainVKPage();
     }
 }

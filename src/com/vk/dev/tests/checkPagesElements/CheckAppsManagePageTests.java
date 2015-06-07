@@ -8,23 +8,25 @@ import org.testng.annotations.Test;
  */
 public class CheckAppsManagePageTests extends MyTestBase {
 //run with authorize
+
+
     @Test
     public void testkEmptyAppsManagePage() {
-        app.getNavHelper().OpenVKDevPageAuthorize()
-                .ClickAndWait("//*[@id='dev_top_apps']");
-        app.getCheckHelper().CheckText("Документация", "id=dev_mlist_main")
-                .CheckText("Работа с API","id=dev_mlist_apiusage")
-                .CheckText("SDK","id=dev_mlist_SDK")
-                .CheckText("Список методов","id=dev_mlist_methods")
-                .CheckText("Поддержка","id=dev_mlist_help")
-                .CheckText("Правила","id=dev_mlist_terms")
-                .CheckText("Мои приложения","css=div.label.fl_l > div.fl_l")
-                .CheckText("Создать приложение","css=button.flat_button.fl_r")
-                .CheckText("","id=s_search")
-                .CheckText("Вы ещё не являетесь администратором ни одного приложения.\nСоздать приложение »","id=no_apps");
-        app.getNavHelper().ClickAndWait("//a[contains(@href, '/editapp?act=create')]");
-        app.getCheckHelper().CheckText("Создание приложения","css=div.label");
-        app.getNavHelper().ClickAndWait("id=dev_top_apps").ClickAndWait("css=button.flat_button.fl_r");
-        app.getCheckHelper().CheckText("Создание приложения","css=div.label");
+        app.getNavHelper().openVKDevPageAuthorize()
+                .clickAndWait("//*[@id='dev_top_apps']");
+        app.getCheckHelper().checkText("Документация", "id=dev_mlist_main")
+                .checkText("Работа с API","id=dev_mlist_apiusage")
+                .checkText("SDK","id=dev_mlist_SDK")
+                .checkText("Список методов","id=dev_mlist_methods")
+                .checkText("Поддержка", "id=dev_mlist_help")
+                .checkText("Правила", "id=dev_mlist_terms")
+                .checkText("Мои приложения", "css=div.label.fl_l > div.fl_l")
+                .checkText("Создать приложение", "css=button.flat_button.fl_r")
+                .checkText("", "id=s_search");
+//                .checkText("Вы ещё не являетесь администратором ни одного приложения.\nСоздать приложение »","id=no_apps"); // when user don`t have any apps
+        app.getNavHelper().clickAndWait("//a[contains(@href, '/editapp?act=create')]");
+        app.getCheckHelper().checkText("Создание приложения","css=div.label");
+        app.getNavHelper().clickAndWait("id=dev_top_apps").clickAndWait("css=button.flat_button.fl_r");
+        app.getCheckHelper().checkText("Создание приложения","css=div.label");
     }
 }
